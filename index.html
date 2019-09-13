@@ -5,8 +5,40 @@
 <title>Agile Timer</title>
 </head>
 <body>
-
+<p id="demo"></p>
     
+<form action="#" method="get" id="frm" onsubmit="myFunction()">
+    <select id="select">
+    <option value="05">05</option>
+    <option value="10">10</option>
+    <option value="15">15</option>
+</select>
+    <button>Submit</button>
+</form>
+    
+
+<p id="demo2"></p>
+    <p id="demo3"></p>
+<script src="js/script.js"></script>  
+    <script>
+    function myFunction() {
+    var x = document.getElementById("select");
+    var selectElement = document.querySelector('#select');
+    var output = selectElement.value;
+    if(output == "5") {
+        document.getElementById("demo2").innerHTML = "5";
+        var countDownDate = new Date("10:00:00").getTime();
+        console.log(countDownDate);
+        document.getElementById("demo3").innerHTML = countDownDate;
+    } else if(output == "10") {
+        document.getElementById("demo2").innerHTML = "10";
+    } else if (output == "15") {
+        document.getElementById("demo2").innerHTML = "15";
+    } 
+    console.log(output);
+
+}
+    </script>
 </body>
 
 </html>
